@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "InformationSystem": [
+    {
+      "firstName": "adnan",
+      "lastName": "abbas",
+      "phone": "03342279199",
+      "email": "aabbas@avanceon.ae",
+      "cnic": "31302497526",
+      "dob": "1989-01-09T19:00:00.000Z",
+      "gender": "male",
+      "experience": 6,
+      "education": "Graduate",
+      "id": 1
+    },
+    {
+      "firstName": "adnan",
+      "lastName": "abbas",
+      "phone": "03342279199",
+      "email": "aabbas@avanceon.ae",
+      "cnic": "31302497526",
+      "dob": "1989-01-09T19:00:00.000Z",
+      "gender": "male",
+      "experience": 6,
+      "education": "Graduate",
+      "id": 2
+    },
+    {
+      "firstName": "adnan",
+      "lastName": "abbas",
+      "phone": "03342279199",
+      "email": "aabbas@avanceon.ae",
+      "cnic": "31302497526",
+      "dob": "1989-01-09T19:00:00.000Z",
+      "gender": "male",
+      "experience": 6,
+      "education": "Graduate",
+      "id": 3
+    },
+    {
+      "firstName": "adee",
+      "lastName": "abbas",
+      "phone": "03342279199",
+      "email": "aabbas@avanceon.ae",
+      "cnic": "31302497526",
+      "dob": "1989-01-09T19:00:00.000Z",
+      "gender": "male",
+      "experience": 6,
+      "education": "Graduate",
+      "id": 4
+    }
+  ]
+}
