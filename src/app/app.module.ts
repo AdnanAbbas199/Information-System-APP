@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,7 +21,11 @@ import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
-
+import { LoginComponent } from './login/login.component';
+import { DataInformationComponent } from './data-information/data-information.component';
+import { MatSortModule } from '@angular/material/sort';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -31,6 +34,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     AppComponent,
     InfoAddEditComponent,
     ConfirmDialogComponent,
+    LoginComponent,
+    DataInformationComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +57,12 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatTableModule,
     MatPaginatorModule,
     MatSnackBarModule,
+    MatTableModule,
+    MatSortModule,
+    FlexLayoutModule,
+    MatCardModule,
+   
+
   
   ],
   providers: [],
