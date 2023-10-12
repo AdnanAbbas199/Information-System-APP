@@ -1,0 +1,7 @@
+.action{
+    display: flex;
+    align-self: flex-end;
+    align-content: stretch;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }

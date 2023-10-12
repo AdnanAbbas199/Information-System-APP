@@ -19,12 +19,18 @@ import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    InfoAddEditComponent
+    InfoAddEditComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,9 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSnackBarModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

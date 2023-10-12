@@ -31,10 +31,10 @@
 <div class="main-body">
   <mat-form-field style="width: 100%;">
     <mat-label>Search here..</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. First Name" #input>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search here..." #input>
   </mat-form-field>
 
-  <div class="mat-elevation-z8">
+  <div class="mat-elevation-z2">
     <table mat-table [dataSource]="dataSource" matSort>
 
       <!-- ID Column -->
@@ -101,10 +101,10 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
         <td mat-cell *matCellDef="let row">
-          <button mat-icon-button color="primary">
+          <button mat-icon-button color="primary" (click)="updateInfomration(row)">
             <mat-icon>edit</mat-icon>
           </button>
-          <button mat-icon-button color="warn" (click)="deleteInfomration(row.id)">
+          <button mat-icon-button color="warn" (click)="deleteInfomration(row.id)" >
             <mat-icon>delete</mat-icon>
           </button>
         </td>
