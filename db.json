@@ -16,5 +16,30 @@
   "profile": {
     "name": "typicode"
   },
-  "InformationSystem": []
+  "InformationSystem": [
+    {
+      "firstName": "adnan",
+      "lastName": "abbas",
+      "phone": "03342279199",
+      "email": "aabbas",
+      "cnic": "",
+      "dob": "",
+      "gender": "",
+      "experience": "",
+      "education": "",
+      "id": 1
+    },
+    {
+      "firstName": "Ali",
+      "lastName": "",
+      "phone": "",
+      "email": "",
+      "cnic": "",
+      "dob": "",
+      "gender": "",
+      "experience": "",
+      "education": "",
+      "id": 2
+    }
+  ]
 }
