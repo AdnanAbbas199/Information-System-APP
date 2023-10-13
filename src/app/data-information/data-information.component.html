@@ -26,6 +26,11 @@
       </mat-menu>
     </span>
     <span class="fill-remaining-space">ITS Systems Information</span>
+    <button mat-fab extended color="warn" [routerLink]='[""]'>
+      <mat-icon>exit_to_app</mat-icon>
+      Logout
+    </button>
+   
   </mat-toolbar>
   
   <div class="main-body">
@@ -109,8 +114,6 @@
             </button>
           </td>
         </ng-container>
-  
-  
   
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -26,6 +26,7 @@ import { DataInformationComponent } from './data-information/data-information.co
 import { MatSortModule } from '@angular/material/sort';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -36,6 +37,7 @@ import {MatCardModule} from '@angular/material/card';
     ConfirmDialogComponent,
     
     DataInformationComponent,
+          LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,9 +63,6 @@ import {MatCardModule} from '@angular/material/card';
     MatSortModule,
     FlexLayoutModule,
     MatCardModule,
-   
-
-  
   ],
   providers: [],
   bootstrap: [AppComponent]

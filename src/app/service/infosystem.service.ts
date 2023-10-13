@@ -19,7 +19,12 @@ export class InfosystemService {
     return this._http.delete('http://localhost:3000/InformationSystem/'+id);
   }
   updateInfo(id:number,data: any): Observable<any> {
-    debugger;
+  
     return this._http.put('http://localhost:3000/InformationSystem/'+id, data);
+  }
+
+  login(data: any): Observable<any> {
+  
+    return this._http.put('http://localhost:3000/InformationSystemUsers', data);
   }
 }
