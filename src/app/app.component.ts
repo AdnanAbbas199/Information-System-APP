@@ -15,6 +15,10 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  popoverTitle = 'Popover title';
+  popoverMessage = 'Popover description';
+  confirmClicked = false;
+  cancelClicked = false;
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'phone', 'email', 'cnic', 'dob', 'gender', 'experience', 'education', 'action'];
   dataSource!: MatTableDataSource<any>;
 

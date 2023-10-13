@@ -5,7 +5,9 @@
   }
 
   .main-body{
-  max-width: 90%;
+   margin:  0 auto;
+   padding-top: 30px;
+  max-width: 80%;
    
   }
 
