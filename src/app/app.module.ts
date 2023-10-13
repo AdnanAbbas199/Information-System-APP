@@ -30,18 +30,14 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     InfoAddEditComponent,
     ConfirmDialogComponent,
-
     DataInformationComponent,
     LoginComponent,
     UsersComponent,
-   
   ],
   imports: [
     BrowserModule,
