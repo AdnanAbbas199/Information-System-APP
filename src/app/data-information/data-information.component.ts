@@ -1,20 +1,21 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,AfterViewInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { InfoAddEditComponent } from './info-add-edit/info-add-edit.component';
-import { InfosystemService } from './service/infosystem.service';
-import { SnackBarService } from './service/snack-bar.service';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { InfoAddEditComponent } from '../info-add-edit/info-add-edit.component';
+import { InfosystemService } from '../service/infosystem.service';
+import { SnackBarService } from '../service/snack-bar.service';
+import { MatPaginator} from '@angular/material/paginator';
+import { MatSort} from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
-
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-data-information',
+  templateUrl: './data-information.component.html',
+  styleUrls: ['./data-information.component.css'],
+ 
 })
-export class AppComponent implements OnInit {
+export class DataInformationComponent  implements OnInit {
+
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'phone', 'email', 'cnic', 'dob', 'gender', 'experience', 'education', 'action'];
   dataSource!: MatTableDataSource<any>;
 
@@ -24,9 +25,10 @@ export class AppComponent implements OnInit {
   constructor(private _dialog: MatDialog, private _infoService: InfosystemService, private _snackBar: SnackBarService) { }
 
   ngOnInit(): void {
-
+    
     this.getInfomration();
   }
+
   openAddEditInfoForm() {
     const dialogref = this._dialog.open(InfoAddEditComponent);
     dialogref.afterClosed().subscribe({
