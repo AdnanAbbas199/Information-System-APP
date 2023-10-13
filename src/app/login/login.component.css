@@ -12,3 +12,11 @@ mat-card {
 .full-width-input {
     width: 100%;
 }
+.action{
+    padding: 0px 25px 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+ 

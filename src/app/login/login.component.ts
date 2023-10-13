@@ -32,14 +32,15 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     debugger;
     if (this.form.valid) {
+      this.router.navigate(['/DataInformation']);
       this._infoService.login(this.form.value).subscribe(result => {
         if (result.successfully) {
+          
         }
       });
     }
     else{
       this._snackBar.openSnackBar("Invalid Credentials", 'Error');
-      this.router.navigate(['/DataInformation']);
     }
     this.formSubmitAttempt = true;
   }
