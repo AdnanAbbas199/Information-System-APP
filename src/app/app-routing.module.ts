@@ -4,11 +4,14 @@ import { DataInformationComponent } from './data-information/data-information.co
 import { LoginComponent } from './login/login.component';
 import { AddEditUserComponent } from './users/add-edit-user/add-edit-user.component';
 import { ShowAllUsersComponent } from './users/show-all-users/show-all-users.component';
+import { UsersComponent } from './users/users.component';
+import { authGuard } from './shared/auth.guard';
+import { config } from 'rxjs';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
-  {path:'DataInformation',component:DataInformationComponent},
-  {path:'Signup',component:ShowAllUsersComponent}
+  {path:'DataInformation',component:DataInformationComponent,canActivate:[authGuard]},
+  {path:'Signup',component:UsersComponent}
 ];
 
 @NgModule({

@@ -22,7 +22,7 @@
       "lastName": "abbas",
       "phone": "03342279199",
       "email": "aabbas",
-      "cnic": "",
+      "cnic": "dsd",
       "dob": "",
       "gender": "",
       "experience": "",
@@ -30,15 +30,15 @@
       "id": 1
     },
     {
-      "firstName": "Ali",
-      "lastName": "",
-      "phone": "",
-      "email": "",
-      "cnic": "",
-      "dob": "",
-      "gender": "",
-      "experience": "",
-      "education": "",
+      "firstName": "fsd",
+      "lastName": "dsf",
+      "phone": "ffe",
+      "email": "4rewfhhfghfghgfhfgh",
+      "cnic": "r32432",
+      "dob": "2023-10-17T19:00:00.000Z",
+      "gender": "male",
+      "experience": 32,
+      "education": "Post Graduate",
       "id": 2
     }
   ],

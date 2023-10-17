@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { InfosystemService } from '../service/infosystem.service';
 import { SnackBarService } from '../service/snack-bar.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   formSubmitAttempt!: boolean;
 
   constructor(
-    private fb: FormBuilder, private _infoService: InfosystemService,private _snackBar: SnackBarService, private router: Router  ) { }
+    private fb: FormBuilder, private _infoService: InfosystemService,private _snackBar: SnackBarService, private router: Router ,private authService :AuthService ) { }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -32,7 +33,16 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     debugger;
     if (this.form.valid) {
-      this.router.navigate(['/DataInformation']);
+      // this._infoService.changeName(true);
+      // if(this.form.value['userName']=="admin"){
+      // this._infoService.changeroletoAdmin(true);
+      // }else {
+      //   this._infoService.changeroletoAdmin(false);
+      // }
+
+      this.authService.login(this.form.value);
+
+     
       this._infoService.login(this.form.value).subscribe(result => {
         if (result.successfully) {
           

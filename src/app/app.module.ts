@@ -21,13 +21,17 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
-
 import { DataInformationComponent } from './data-information/data-information.component';
 import { MatSortModule } from '@angular/material/sort';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
+import { AddEditUserComponent } from './users/add-edit-user/add-edit-user.component';
+import { ShowAllUsersComponent } from './users/show-all-users/show-all-users.component';
+import { InfosystemService } from './service/infosystem.service';
+import { AuthService } from './shared/auth.service';
+
 
 
 @NgModule({
@@ -38,6 +42,8 @@ import { UsersComponent } from './users/users.component';
     DataInformationComponent,
     LoginComponent,
     UsersComponent,
+    AddEditUserComponent,
+    ShowAllUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -63,8 +69,10 @@ import { UsersComponent } from './users/users.component';
     MatSortModule,
     FlexLayoutModule,
     MatCardModule,
+    
   ],
-  providers: [],
+  
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

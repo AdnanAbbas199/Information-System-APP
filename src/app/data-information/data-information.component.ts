@@ -7,6 +7,7 @@ import { MatPaginator} from '@angular/material/paginator';
 import { MatSort} from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-information',
@@ -15,21 +16,24 @@ import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.compone
  
 })
 export class DataInformationComponent  implements OnInit {
-
+ 
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'phone', 'email', 'cnic', 'dob', 'gender', 'experience', 'education', 'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private _dialog: MatDialog, private _infoService: InfosystemService, private _snackBar: SnackBarService) { }
+  constructor(private _dialog: MatDialog, private _infoService: InfosystemService, private _snackBar: SnackBarService,private _router:Router) {
+    // this._infoService.changeName(true);
+   }
 
   ngOnInit(): void {
-    
+    this._router.routeReuseStrategy.shouldReuseRoute=()=>{return false}   ;
     this.getInfomration();
   }
 
   openAddEditInfoForm() {
+    debugger;
     const dialogref = this._dialog.open(InfoAddEditComponent);
     dialogref.afterClosed().subscribe({
 
@@ -64,6 +68,7 @@ export class DataInformationComponent  implements OnInit {
   }
 
   deleteInfomration(id: number) {
+    debugger;
     const dialogRef = this._dialog.open(ConfirmDialogComponent);
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
